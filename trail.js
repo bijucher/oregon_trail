@@ -11,7 +11,6 @@ function Wagon(capacity) {
     this.passengerList = [];
 }
 
-
 Traveler.prototype.hunt = function () {
     this.food = this.food + 2;
 }
@@ -29,27 +28,25 @@ Wagon.prototype.getAvailableSeatCount = function () {
     return this.capacity - this.passengerList.length;
 }
 //Add the traveler to the wagon if there is space. If the wagon is already at maximum capacity, don't add them.
-Wagon.prototype.join = function (traveler) {
-
-    if (this.capacity === 0) {
-        this.join = false;
-        this.passangerList.push(traveler)
-    } else {
-        this.join = this.join - 1;
+Wagon.prototype.join = function (Traveler) {
+    if (this.capacity > this.passengerList.length) {
+        this.passengerList.push(Traveler);
     }
+    else {
 
+    }
 }
 //Return true if there is at least one unhealthy person in the wagon. Return false if not.
 Wagon.prototype.shouldQuarantine = function () {
-    for (let i = 0; i < this.passengerList; i++) {
-        this.passangers[i];
+    if (this.passengerList < this.capacity) {
+        (this.passengerList[i].isHealthy !== true)
+        this.passengerList.push(Traveler);
     }
-
+    return true
 }
 Wagon.prototype.totalFood = function () {
-    for (let i = 1; i < this.totalFood; i--) {
-        return this.totalFood[i];
-    }
+    if (this.eat < this.totalFood)
+        return (this.totalFood)
 }
 
 // Create a wagon that can hold 2 people
